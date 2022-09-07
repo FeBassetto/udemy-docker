@@ -77,6 +77,17 @@
 
 - ***docker rm -f name*** &rarr; Force stop and remove docker container by container id
 
+<br>
+
+# See images
+
+- ***docker image ls*** &rarr; See images
+
+<br>
+
+# Dowloading image
+
+- ***docker pull python*** &rarr; Dowload python
 
 <br>
 <br>
@@ -90,3 +101,24 @@
 - ***EXPOSE*** &rarr; Application port
 
 - ***COPY*** &rarr; Files that need to be copied
+
+<br>
+
+## Example: 
+FROM node
+
+WORKDIR /app
+
+COPY package*.json .
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
+
+CMD ["node", "app.js"]
+
+- ***docker build .*** &rarr; Build Dockerfile "docker build (root of Dockerfile)"
+
+- ***docker run -d -p 3000:3000 --name my_node id*** &rarr; Run Dockerfile
