@@ -35,6 +35,10 @@
 
 - ***docker run -d -p 3000:80 nginx*** &rarr; Run nginx background and in browser port 3000
 
+## --name 
+
+- ***docker run -d -p 80:80 --name nginx-container nginx*** &rarr; Run nginx with name nginx-container
+
 <br>
 
 # Stop container
@@ -50,3 +54,39 @@
 - ***docker start id*** &rarr; Start docker container by container id
 
 - ***docker start name*** &rarr; Start docker container by container name
+
+<br>
+
+# Logs container 
+
+- ***docker logs id*** &rarr; Logs docker container by container id
+
+- ***docker logs name*** &rarr; Logs docker container by container name
+
+<br>
+
+# Remove container
+
+- ***docker rm id*** &rarr; Remove docker container by container id
+
+- ***docker rm name*** &rarr; Remove docker container by container id
+
+## -f
+
+- ***docker rm -f id*** &rarr; Force stop and remove docker container by container id
+
+- ***docker rm -f name*** &rarr; Force stop and remove docker container by container id
+
+
+<br>
+<br>
+
+# ***Dockerfile***
+
+- ***FROM*** &rarr; Base image
+
+- ***WORKDIR*** &rarr; Application directory
+
+- ***EXPOSE*** &rarr; Application port
+
+- ***COPY*** &rarr; Files that need to be copied
