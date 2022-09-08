@@ -200,3 +200,25 @@ CMD ["node", "app.js"]
 - ***docker pull 17102003/first_image_node:1.0*** &rarr; Pull image with a tag
 
 - ***docker run -d -p 3000:3000 --name test_image 17102003/first_image_node:1.0*** &rarr; Run image
+
+<br>
+<br>
+
+<center>
+
+# Volumes
+
+</center>
+
+# See volumes
+
+- ***docker volume ls*** &rarr; See all docker volumes
+
+# Run with volume
+
+- ***docker run -d -p 80:80 --name node_container -v /data node_image*** &rarr; Run container and create a volume without name
+
+- ***docker run -d -p 80:80 --name node_container -v name_volume:/var/www/html/messages node_image*** &rarr; Run container and create a volume with name
+
+- ***docker run -d -p 80:80 --name php_container -v /mnt/c/Users/felip/workspace/2-study/udemy/docker/2-Volumes/messages:/var/www/html/messages --rm php_messages*** &rarr; Run container and create a volume and upload local folder
+
