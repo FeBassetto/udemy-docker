@@ -55,6 +55,8 @@
 
 - ***docker start name*** &rarr; Start docker container by container name
 
+- ***docker start -i name*** &rarr; Start docker and see logs
+
 <br>
 
 # Logs container 
@@ -79,15 +81,17 @@
 
 <br>
 
-# See images
+# Copy container file or folder to other folder
 
-- ***docker image ls*** &rarr; See images
+- ***docker cp node_container:/app/app.js ./copy/*** &rarr; Copy the file app.js to a local folder copy
 
 <br>
 
-# Dowloading image
+# Get informations docker container
 
-- ***docker pull python*** &rarr; Dowload python
+- ***docker top container*** &rarr; See informations about container
+
+- ***docker inspect container*** &rarr; See id, createdData, image, etc
 
 <br>
 <br>
@@ -122,3 +126,40 @@ CMD ["node", "app.js"]
 - ***docker build .*** &rarr; Build Dockerfile "docker build (root of Dockerfile)"
 
 - ***docker run -d -p 3000:3000 --name my_node id*** &rarr; Run Dockerfile
+
+- ***docker run -d -p 3000:3000 --name my_node name*** &rarr; Run Dockerfile
+
+- ***docker run -d -p 3000:3000 --name my_node --rm name*** &rarr; Run Dockerfile and when stop it is removed
+
+<br>
+<br>
+
+# See images
+
+- ***docker image ls*** &rarr; See images
+
+- ***docker images*** &rarr; See images
+
+<br>
+
+# Dowloading image
+
+- ***docker pull python*** &rarr; Dowload python
+
+<br>
+
+# Name for image
+
+- ***docker tag id name:tag*** &rarr; Change name and tag image
+
+- ***docker build -t name:tag .*** &rarr; Build with name
+
+<br>
+
+# Remove image
+
+- ***docker rmi name*** &rarr; Remove image by name
+
+- ***docker rmi id*** &rarr; Remove image by id
+
+- ***docker systmem prune*** &rarr; Remove all containers, images and networks that are't being used
