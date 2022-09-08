@@ -1,3 +1,9 @@
+<center>
+
+# Containers
+
+</center>
+
 # See containers
 
 - ***docker ps*** &rarr; See containers running
@@ -93,8 +99,16 @@
 
 - ***docker inspect container*** &rarr; See id, createdData, image, etc
 
+- ***docker stats*** &rarr; See how many memory, cpu and some informations about every containers
+
 <br>
 <br>
+
+<center>
+
+# Images
+
+</center>
 
 # ***Dockerfile***
 
@@ -152,7 +166,7 @@ CMD ["node", "app.js"]
 
 - ***docker tag id name:tag*** &rarr; Change name and tag image
 
-- ***docker build -t name:tag .*** &rarr; Build with name
+- ***docker build -t name:tag .*** &rarr; Build with name and tag
 
 <br>
 
@@ -163,3 +177,26 @@ CMD ["node", "app.js"]
 - ***docker rmi id*** &rarr; Remove image by id
 
 - ***docker systmem prune*** &rarr; Remove all containers, images and networks that are't being used
+
+<br>
+<br>
+
+# Docker commands
+
+- ***docker login*** &rarr; Login to docker
+
+- ***docker logout*** &rarr; Logout docker
+
+-***docker build -t 17102003/first_image_node .*** &rarr; Get image to docker hub
+
+- ***docker push 17102003/first_image_node*** &rarr; Push image to docker hub
+
+- ***docker pull 17102003/first_image_node*** &rarr; Update local image with hub image
+
+- ***docker build -t 17102003/first_image_node:1.0 .*** &rarr; Build image with a tag
+
+- ***docker push 17102003/first_image_node:1.0*** &rarr; Push image with a tag
+
+- ***docker pull 17102003/first_image_node:1.0*** &rarr; Pull image with a tag
+
+- ***docker run -d -p 3000:3000 --name test_image 17102003/first_image_node:1.0*** &rarr; Run image
