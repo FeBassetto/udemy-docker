@@ -262,3 +262,23 @@ CMD ["node", "app.js"]
 # See all networks
 
 - ***docker network ls*** &rarr; See all networks
+
+<br>
+
+# Create network
+
+- ***docker network create my_network*** &rarr; Create a network
+
+## Another driver
+
+- ***docker network create -d macvlan my_network*** &rarr; Create a network with specific
+
+<br>
+
+# Remove network
+
+- ***docker network rm my_network*** &rarr; Remove a network
+
+# Remove unused networks
+
+- ***docker network prune*** &rarr; Remove unused networks
