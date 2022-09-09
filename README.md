@@ -1,8 +1,4 @@
-<center>
-
-# Containers
-
-</center>
+<h1 align="center">Containers</h1>
 
 # See containers
 
@@ -104,11 +100,7 @@
 <br>
 <br>
 
-<center>
-
-# Images
-
-</center>
+<h1 align="center">Images</h1>
 
 # ***Dockerfile***
 
@@ -204,21 +196,69 @@ CMD ["node", "app.js"]
 <br>
 <br>
 
-<center>
+<h1 align="center">Volumes</h1>
 
-# Volumes
-
-</center>
 
 # See volumes
 
 - ***docker volume ls*** &rarr; See all docker volumes
 
+<br>
+
 # Run with volume
 
+## Without name
 - ***docker run -d -p 80:80 --name node_container -v /data node_image*** &rarr; Run container and create a volume without name
 
+## With name
 - ***docker run -d -p 80:80 --name node_container -v name_volume:/var/www/html/messages node_image*** &rarr; Run container and create a volume with name
 
+## In local
 - ***docker run -d -p 80:80 --name php_container -v /mnt/c/Users/felip/workspace/2-study/udemy/docker/2-Volumes/messages:/var/www/html/messages --rm php_messages*** &rarr; Run container and create a volume and upload local folder
 
+## Read Only
+
+- ***docker run -d -p 80:80 --name php_container -v volumeleitura:/var/www/html:ro --rm php_messages*** &rarr; Create a read only volume
+
+<br>
+
+# Create Volumes
+
+- ***docker volume create name*** &rarr; Create a volume
+
+# Inspect volume
+
+- ***docker volume inspect name*** &rarr; Inspect a volume
+
+# Remove Volume 
+
+- ***docker volume rm name*** &rarr; Remove a volume
+
+# Remove unused volumes
+
+- ***docker volume prune*** &rarr; Remove unused volumes
+
+<br>
+<br>
+
+<h1 align="center">Networks</h1>
+
+<br>
+
+# Types 
+
+- ***bridge*** &rarr; Connect container to other container
+
+- ***host*** &rarr; Connect container to Host
+
+- ***macvlan*** &rarr; Connect container to container with MAC address
+
+- ***nonde*** &rarr; Container can't connect to other
+
+- ***plugins*** &rarr; Connect container with custom network (other person)
+
+<br>
+
+# See all networks
+
+- ***docker network ls*** &rarr; See all networks
