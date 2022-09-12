@@ -290,3 +290,7 @@ CMD ["node", "app.js"]
 # Remove unused networks
 
 - ***docker network prune*** &rarr; Remove unused networks
+
+# Connect container a network
+
+- ***docker network connect network container*** &rarr; connect container a network

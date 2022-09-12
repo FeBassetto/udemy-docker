@@ -9,7 +9,7 @@ const pool = mysql.createPool({
     connectionLimit: 10,
     host: 'mysql_container',
     user: 'root',
-    password: '',
+    password: 'felipe',
     database: 'nodeDocker'
 })
 
