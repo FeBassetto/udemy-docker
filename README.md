@@ -41,6 +41,14 @@
 
 - ***docker run -d -p 80:80 --name nginx-container nginx*** &rarr; Run nginx with name nginx-container
 
+## --mysql with network
+
+- ***docker run -d -p 3306:3306 --name mysql_container --rm --network mysqlnetwork -e MYSQL_ALLOW_EMPTY_PASSWORD=True mysqlimage*** &rarr; Run mysql image with network
+
+## --mysql image
+
+- ***docker run -d -v /var/lib/mysql -p 3306:3306 --name mysql_container --rm -e MYSQL_ROOT_PASSWORD=docker -e MYSQL_DATABASE=nodeDocker -e           MYSQL_USER=felipe -e MYSQL_PASSWORD=dockerfelipe mysql:5.7***
+
 <br>
 
 # Stop container
