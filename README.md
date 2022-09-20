@@ -293,4 +293,31 @@ CMD ["node", "app.js"]
 
 # Connect container a network
 
-- ***docker network connect network container*** &rarr; connect container a network
+- ***docker network connect network container*** &rarr; Connect container a network
+
+# Disconnect container a network
+
+- ***docker network disconnect network container*** &rarr; Disconnect container a network
+
+# Inspect network
+
+- ***docker network inspect networkname*** &rarr; Inspect a network
+
+<br>
+<br>
+
+<h1 align="center">Compose</h1>
+
+<br>
+
+# Run docker-compose
+
+- ***docker-compose up*** &rarr; Run docker-compose
+
+## -d
+
+- ***docker-compose up -d*** &rarr; Run docker-compose without console
+
+# Stop docker-compose
+
+- ***docker-compose down*** &rarr; Stop docker-compose
